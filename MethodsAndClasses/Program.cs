@@ -16,6 +16,22 @@
             Book book3 = new Book("A kis herceg", "nincs infó");
             book2.Borrow();
 
+            Library library = new Library("Könyvtár");
+            library.AddBook(book1);
+            library.AddBook(book2);
+            library.AddBook(book3);
+
+            Book book4 = new Book("d", "nincs infó", 200);
+            Book book5 = new Book("e", "nincs infó", 400);
+            library.AddBook(book4);
+            library.AddBook(book5);
+
+            book4.Borrow();
+            library.PrintAll();
+            library.AvailableBooks();
+
+
+
         }
     }
 }
